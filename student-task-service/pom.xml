@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
 
-	<groupId>pe.keniding</groupId>
+	<groupId>com.keniding</groupId>
 	<artifactId>student-task-service</artifactId>
 	<name>student-task-service</name>
 	<version>0.0.1</version>
@@ -50,17 +50,17 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>pe.keniding</groupId>
+				<groupId>com.keniding</groupId>
 				<artifactId>student-task-input</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
-				<groupId>pe.keniding</groupId>
+				<groupId>com.keniding</groupId>
 				<artifactId>student-task-core</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
-				<groupId>pe.keniding</groupId>
+				<groupId>com.keniding</groupId>
 				<artifactId>student-task-output</artifactId>
 				<version>0.0.1</version>
 			</dependency>

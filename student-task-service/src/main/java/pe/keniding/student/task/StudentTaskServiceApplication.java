@@ -1,4 +1,4 @@
-package pe.keniding.student.task;
+package com.keniding.student.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,76 @@
+{
+  "name": "StudentTaskService",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "CreateTask",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:8080/api/tasks",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "json",
+          "json": "{\"title\":\"Estudiar Cálculo\",\"description\":\"Repasar límites y derivadas\",\"category\":\"MATHEMATICS\",\"dueDate\":\"2026-01-20\"}"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "GetAllTasks",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8080/api/tasks",
+        "method": "GET",
+        "headers": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "GetTaskById",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8080/api/tasks/1",
+        "method": "GET",
+        "headers": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "UpdateTaskStatus",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/api/tasks/1/status?status=COMPLETED",
+        "method": "PATCH",
+        "headers": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "DeleteTask",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:8080/api/tasks/1",
+        "method": "DELETE",
+        "headers": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "GetTasksByCategory",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8080/api/tasks/category/MATHEMATICS",
+        "method": "GET",
+        "headers": []
+      }
+    }
+  ]
+}
