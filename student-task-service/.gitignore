@@ -53,3 +53,8 @@ Thumbs.db
 
 # Docker volumes
 postgres-data/
+
+# Environment variables
+.env
+*.env
+application-dev.properties

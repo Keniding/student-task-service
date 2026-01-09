@@ -5,9 +5,11 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface TaskDtoMapper {
+
     TaskResponseDto toDto(TaskReturnValue value);
+
     default List<TaskResponseDto> toDtoList(List<TaskReturnValue> values) {
         return values.stream().map(this::toDto).toList();
     }

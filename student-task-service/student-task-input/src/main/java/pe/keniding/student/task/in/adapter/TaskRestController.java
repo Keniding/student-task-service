@@ -3,7 +3,6 @@ package pe.keniding.student.task.in.adapter;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.mapstruct.factory.Mappers;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import pe.keniding.student.task.core.port.in.TaskInputPort;
@@ -17,12 +16,8 @@ import java.util.List;
 @RequestMapping("/api/tasks")
 public class TaskRestController {
 
-    private TaskInputPort taskCore;
-    private final TaskDtoMapper mapper = Mappers.getMapper(TaskDtoMapper.class);
-
-    public TaskRestController(TaskInputPort taskCore) {
-        this.taskCore = taskCore;
-    }
+    private final TaskInputPort taskCore;
+    private final TaskDtoMapper mapper;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

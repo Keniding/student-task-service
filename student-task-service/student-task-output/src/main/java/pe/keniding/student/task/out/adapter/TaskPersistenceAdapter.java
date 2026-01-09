@@ -5,7 +5,6 @@ import pe.keniding.student.task.core.port.out.TaskData;
 import pe.keniding.student.task.core.port.out.TaskOutputPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -15,13 +14,14 @@ import java.util.Optional;
 @Component
 @RequiredArgsConstructor
 public class TaskPersistenceAdapter implements TaskOutputPort {
+
     private final TaskJpaRepository repository;
-    private final TaskEntityMapper mapper = Mappers.getMapper(TaskEntityMapper.class);
+    private final TaskEntityMapper mapper;
 
     @Override
     public TaskData save(TaskData task) {
         log.info("Saving task: {}", task.title());
-        TaskEntity entity = mapper.toEntry(task);
+        TaskEntity entity = mapper.toEntity(task);
         TaskEntity savedEntity = repository.save(entity);
         return mapper.toData(savedEntity);
     }
