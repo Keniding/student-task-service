@@ -8,5 +8,5 @@ public interface TaskInputPort {
     List<TaskReturnValue> getAllTasks();
     TaskReturnValue updateTaskStatus(Long id, String status);
     void deleteTask(Long id);
-    List<TaskReturnValue> getTaskByCategory(String category);
+    List<TaskReturnValue> getTasksByCategory(String category);
 }

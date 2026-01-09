@@ -73,7 +73,7 @@ public class TaskUseCase implements TaskInputPort {
     }
 
     @Override
-    public List<TaskReturnValue> getTaskByCategory(String category) {
+    public List<TaskReturnValue> getTasksByCategory(String category) {
         log.info("Getting task by category: {}", category);
 
         return taskOutputPort.findByCategory(category)
