@@ -1,4 +1,4 @@
-package com.keniding.studenttaskcore;
+package com.keniding.student.task.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
